@@ -8,6 +8,7 @@ const platesSchema = new mongoose.Schema(
         price: { type: Number, required: true},
         account: {type: Number},
         picture: String,
+        type: String,
     },
     {
         timestamps: true
