@@ -17,4 +17,4 @@ const platesSchema = new mongoose.Schema(
 
 const Plates = mongoose.model('Plates', platesSchema);
 
-module.exports = Plates
+module.exports = Plates;

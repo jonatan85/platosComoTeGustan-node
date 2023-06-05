@@ -26,6 +26,15 @@ platesRouter.get('/:id', async (request, response, next) => {
        next(error)
    }
 });
+platesRouter.get('/type/:type', async (request, response, next) => {
+   try {
+       const type = request.params.type;
+       const allPlates = await Plates.find({ type: type});
+       return response.status(200).json(allPlates);
+   } catch (error) {
+       next(error)
+   }
+});
 
 platesRouter.post('/', async (req, res, next) => {
     try {
